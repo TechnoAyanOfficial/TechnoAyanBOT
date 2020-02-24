@@ -1,10 +1,3 @@
-"""Emoji
-
-Available Commands:
-
-.police
-
-if u edit it then u r gay"""
 
 from telethon import events
 
@@ -14,7 +7,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"(.*)"))
+@borg.on(admin_cmd(pattern=r"police"))
 
 async def _(event):
 
@@ -26,13 +19,9 @@ async def _(event):
 
     animation_ttl = range(0, 12)
 
-    input_str = event.pattern_match.group(1)
+    await event.edit("Police")
 
-    if input_str == "police":
-
-        await event.edit(input_str)
-
-        animation_chars = [
+    animation_chars = [
         
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
             "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
@@ -49,8 +38,8 @@ async def _(event):
 
  ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 12])
+        await event.edit(animation_chars[i % 12])
