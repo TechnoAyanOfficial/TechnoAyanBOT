@@ -12,7 +12,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"(.*)"))
+@borg.on(admin_cmd(pattern=r"padmin"))
 
 async def _(event):
 
@@ -23,14 +23,10 @@ async def _(event):
     animation_interval = 1
 
     animation_ttl = range(0, 20)
+    
+    await event.edit("Promoting")
 
-    input_str = event.pattern_match.group(1)
-
-    if input_str == "padmin":
-
-        await event.edit(input_str)
-
-        animation_chars = [
+    animation_chars = [
         
             "**Promoting User As Admin...**",
             "**Enabling All Permissions To User...**",
@@ -55,8 +51,8 @@ async def _(event):
 
  ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 20])
+        await event.edit(animation_chars[i % 20])
