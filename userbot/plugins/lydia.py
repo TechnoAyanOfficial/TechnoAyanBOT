@@ -16,7 +16,7 @@ async def repcf(event):
         return
     await event.edit("Processing...")
     try:
-        session = api_client.create_session()
+        session = api_client.create_lydia_session()
         session_id = session.id
         reply = await event.get_reply_message()
         msg = reply.text
