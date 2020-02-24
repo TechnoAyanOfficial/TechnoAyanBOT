@@ -1,7 +1,7 @@
 {
-  "name": "X-tra Telegram",
-  "description": "Userbot created by a SNAPDRAGON and custom fork by ANUBIS\n\n join https://t.me/X_tra_tele_support for any problems or support",
-  "logo": "https://telegra.ph/file/1be6c59f53fef57b5745b.jpg",
+  "name": "GujjuBot",
+  "description": "Userbot created by a SNAPDRAGON and custom fork by @Halto_Tha\n\n join https://t.me/Gujju_Bot_Support for any problems or support",
+  "logo": "https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi5zO7Qk-rnAhUG8XMBHTkkCCUQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.facebook.com%2Fgujjukafan856&psig=AOvVaw1JTMP4f5leqKeeKfrFf6yD&ust=1582632497219635",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Dark-Princ3/X-tra-Telegram/",
+  "repository": "https://github.com/japarmar/GujjuBot",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
