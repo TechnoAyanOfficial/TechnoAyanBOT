@@ -152,7 +152,7 @@ async def carbon_api(e):
 
          file,
 
-         caption="<< Here's your carbon, gey boi! \n Carbonised by @Halto_Tha >> ",
+         caption="<< Here's your carbon, \n Carbonised by [GujjuBot](https://www.github.com/GujjuBot)>> ",
 
          force_document=True,
 
@@ -160,7 +160,7 @@ async def carbon_api(e):
 
          )
 
-   os.remove('./Anubis.png')
+   os.remove('./GujjuBot.png')
 
    driver.quit()
 
