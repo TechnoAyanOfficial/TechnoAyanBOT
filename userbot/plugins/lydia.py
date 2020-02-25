@@ -1,4 +1,5 @@
 import coffeehouse
+from coffeehouse.lydia import LydiaAI
 import asyncio
 from telethon import events
 
@@ -9,6 +10,7 @@ SESSION_ID = {}
 if Var.LYDIA_API_KEY:
     api_key = Var.LYDIA_API_KEY
     api_client = coffeehouse.API(api_key)
+    Lydia = LydiaAI(api_client)
 
 @command(pattern="^.repcf", outgoing=True)
 async def repcf(event):
@@ -16,7 +18,7 @@ async def repcf(event):
         return
     await event.edit("Processing...")
     try:
-        session = api_client.create_lydia_session()
+        session = Lydia.create_session()
         session_id = session.id
         reply = await event.get_reply_message()
         msg = reply.text
