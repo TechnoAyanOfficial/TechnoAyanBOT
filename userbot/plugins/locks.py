@@ -4,8 +4,8 @@ from telethon.tl.types import ChatBannedRights
 from userbot import CMD_HELP
 from userbot.events import register, errors_handler
 
-
-@register(outgoing=True, pattern=r"^.alock ?(.*)")
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+@register(outgoing=True, pattern=r"^.lock ?(.*)")
 @errors_handler
 async def locks(event):
     input_str = event.pattern_match.group(1).lower()
@@ -87,7 +87,7 @@ async def locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=lock_rights))
-        await event.edit(f"`anonyCrew locked {what} in ZonersChat Because its Rest Time Nimba!!`")
+        await event.edit(f"`{DEFAULTUSER} locked {what} Because its Rest Time Nimba!!`")
     except BaseException as e:
         await event.edit(
             f"`Do I have proper rights for that ??`\n**Error:** {str(e)}")
@@ -176,7 +176,7 @@ async def rem_locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=unlock_rights))
-        await event.edit(f"`anonyCrew Unlocked {what} for ZonersChat chat bhay Start Chit Chat !!`")
+        await event.edit(f"`{DEFAULTUSER} Unlocked {what} now Start Chit Chat !!`")
     except BaseException as e:
         await event.edit(
             f"`Do I have proper rights for that ??`\n**Error:** {str(e)}")
