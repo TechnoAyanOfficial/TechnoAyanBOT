@@ -36,7 +36,7 @@ async def addcf(event):
     await event.edit("Processing...")
     reply_msg = await event.get_reply_message()
     if reply_msg:
-        session = api_client.create_session()
+        session = Lydia.create_session()
         session_id = session.id
         ACC_LYDIA.update({str(event.chat_id) + " " + str(reply_msg.from_id): session})
         SESSION_ID.update({str(event.chat_id) + " " + str(reply_msg.from_id): session_id})
