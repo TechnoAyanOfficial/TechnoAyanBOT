@@ -126,7 +126,7 @@ async def get_weather(weather):
         f"**Humidity:** `{humidity}%`\n" + 
         f"**Pressure** `{pressure} hPa`\n" + 
         f"**Wind:** `{kmph[0]} kmh | {mph[0]} mph, {findir}`\n" +
-        f"**Cloud:** `{cloud}`\n" + 
+        f"**Cloud:** `{cloud} %`\n" + 
         f"**Sunrise:** `{sun(sunrise)}`\n" +
         f"**Sunset:** `{sun(sunset)}`\n\n\n" + 
         f"**{desc}**\n" +
