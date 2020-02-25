@@ -601,7 +601,7 @@ async def rm_deletedacc(show):
             \nCHAT: {show.chat.title}(`{show.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.admins$")
+@register(outgoing=True, pattern="^.adminlist$")
 @errors_handler
 async def get_admin(show):
     """ For .admins command, list all of the admins of the chat. """
