@@ -689,31 +689,6 @@ async def kek(keks):
             time.sleep(0.3)
             await keks.edit(":" + uio[i % 2])
 
-@register(outgoing=True, pattern=r"^.coinflip (.*)")
-async def _(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        if event.fwd_from:
-            return
-        r = random.randint(1, 100)
-        input_str = event.pattern_match.group(1)
-        if input_str:
-            input_str = input_str.lower()
-        if r % 2 == 1:
-            if input_str == "heads":
-                await event.edit("The coin landed on: **Heads**.\nYou were correct.")
-            elif input_str == "tails":
-                await event.edit("The coin landed on: **Heads**.\nYou weren't correct, try again ...")
-            else:
-                await event.edit("The coin landed on: **Heads**.")
-        elif r % 2 == 0:
-            if input_str == "tails":
-                await event.edit("The coin landed on: **Tails**.\nYou were correct.")
-            elif input_str == "heads":
-                await event.edit("The coin landed on: **Tails**.\nYou weren't correct, try again ...")
-            else:
-                await event.edit("The coin landed on: **Tails**.")
-        else:
-            await event.edit("Gimme another coin, this one fake AF !!")
 
 @register(pattern="^.slap(?: |$)(.*)", outgoing=True)
 async def who(event):
