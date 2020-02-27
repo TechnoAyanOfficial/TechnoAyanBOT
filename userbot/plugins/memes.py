@@ -771,23 +771,7 @@ async def lol(lel):
             okay = okay[:-1] + "_-"
             await lel.edit(okay)
 
-@register(outgoing=True, pattern="^.decide$")
-async def _(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        if event.fwd_from:
-            return
-        message_id = event.message.id
-        if event.reply_to_msg_id:
-            message_id = event.reply_to_msg_id
-        r = requests.get("https://yesno.wtf/api").json()
-        await event.client.send_message(
-            event.chat_id,
-            str(r["answer"]).upper(),
-            reply_to=message_id,
-            file=r["image"]
-        )
-        await event.delete()
-
+ 
 @register(outgoing=True, pattern="^.;_;$")
 async def fun(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -1006,7 +990,7 @@ async def thanos (thanos):
         reply_text = THANOS_STRINGS[index]
         await thanos.edit(reply_text)	
 			  
-@register(outgoing=True, pattern="^.abusehard$")
+@register(outgoing=True, pattern="^.hardabuse$")
 async def fuckedd (abusehard):
     """ Dont Use this Too much bsdk -_-"""
     if not abusehard.text[0].isalpha() and abusehard.text[0] not in ("/", "#", "@", "!"):
@@ -1071,11 +1055,7 @@ async def shrugger(shg):
         await shg.edit(random.choice(SHGS))
 
 
-@register(outgoing=True, pattern="^.runs$")
-async def runner_lol(run):
-    """ Run, run, RUNNN! """
-    if not run.text[0].isalpha() and run.text[0] not in ("/", "#", "@", "!"):
-        await run.edit(random.choice(RUNSREACTS))
+
 
 @register(outgoing=True, pattern="^.noob$")
 async def metoo(hahayes):
@@ -1102,27 +1082,8 @@ async def iqless(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("♿")
 
-@register(outgoing=True, pattern="^.moon$")
-async def _(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-	    if event.fwd_from:
-		    return
-	    deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
-	    for _ in range(32):
-		    await asyncio.sleep(0.1)
-		    await event.edit("".join(deq))
-		    deq.rotate(1)
 
-@register(outgoing=True, pattern="^.clock$")
-async def _(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-	    if event.fwd_from:
-		    return
-	    deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
-	    for _ in range(32):
-		    await asyncio.sleep(0.1)
-		    await event.edit("".join(deq))
-		    deq.rotate(1)
+
 
 @register(outgoing=True, pattern="^.mock(?: |$)(.*)")
 async def spongemocktext(mock):
@@ -1168,15 +1129,6 @@ async def claptext(memereview):
         await memereview.edit(reply_text)
 
 
-@register(outgoing=True, pattern="^.bt$")
-async def bluetext(bt_e):
-    """ Believe me, you will find this useful. """
-    if not bt_e.text[0].isalpha() and bt_e.text[0] not in ("/", "#", "@", "!"):
-        if await bt_e.get_reply_message():
-            await bt_e.edit(
-                "`BLUETEXT MUST CLICK.`\n"
-                "`Are you a stupid animal which is attracted to colours?`"
-            )
 
 
 @register(outgoing=True, pattern="^.smk (.*)")
@@ -1198,12 +1150,7 @@ async def smrk(smk):
              await smk.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"\.f (.*)")
-async def payf(e):
-    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        paytext = e.pattern_match.group(1)
-        pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}".format(paytext*5, paytext*1,paytext*1, paytext*4, paytext*1, paytext*1, paytext*1)
-        await e.edit(pay)
+
 
 
 @register(outgoing=True, pattern="^.lfy (.*)",)
@@ -1228,104 +1175,12 @@ async def let_me_google_that_for_you(lmgtfy_q):
             )
 
 
-@register(outgoing=True, pattern=r".yt_dl (\S*) ?(\S*)")
-async def download_video(v_url):
-    """ For .yt_dl command, download videos from YouTube. """
-    if not v_url.text[0].isalpha() and v_url.text[0] not in ("/", "#", "@", "!"):
-        url = v_url.pattern_match.group(1)
-        quality = v_url.pattern_match.group(2)
 
-        await v_url.edit("**Fetching...**")
-
-        video = YouTube(url)
-
-        if quality:
-            video_stream = video.streams.filter(
-                progressive=True,
-                subtype="mp4",
-                res=quality
-            ).first()
-        else:
-            video_stream = video.streams.filter(
-                progressive=True,
-                subtype="mp4"
-            ).first()
-
-        if video_stream is None:
-            all_streams = video.streams.filter(
-                progressive=True,
-                subtype="mp4"
-            ).all()
-            available_qualities = ""
-
-            for item in all_streams[:-1]:
-                available_qualities += f"{item.resolution}, "
-            available_qualities += all_streams[-1].resolution
-
-            await v_url.edit(
-                "**A stream matching your query wasn't found. Try again with different options.\n**"
-                "**Available Qualities:**\n"
-                f"{available_qualities}"
-            )
-            return
-
-        video_size = video_stream.filesize / 1000000
-
-        if video_size >= 50:
-            await v_url.edit(
-                ("**File larger than 50MB. Sending the link instead.\n**"
-                 f"Get the video [here]({video_stream.url})\n\n"
-                 "**If the video plays instead of downloading, right click(or long press on touchscreen) and "
-                 "press 'Save Video As...'(may depend on the browser) to download the video.**")
-            )
-            return
-
-        await v_url.edit("**Downloading...**")
-
-        video_stream.download(filename=video.title)
-
-        url = f"https://img.youtube.com/vi/{video.video_id}/maxresdefault.jpg"
-        resp = get(url)
-        with open('thumbnail.jpg', 'wb') as file:
-            file.write(resp.content)
-
-        await v_url.edit("**Uploading...**")
-        await v_url.client.send_file(
-            v_url.chat_id,
-            f'{safe_filename(video.title)}.mp4',
-            caption=f"{video.title}",
-            thumb="thumbnail.jpg"
-        )
-
-        os.remove(f"{safe_filename(video.title)}.mp4")
-        os.remove('thumbnail.jpg')
-        await v_url.delete()
+               
 			  
-@register(pattern='.type(?: |$)(.*)')
-async def typewriter(typew):
-    """ Just a small command to make your keyboard become a typewriter! """
-    if not typew.text[0].isalpha() and typew.text[0] not in ("/", "#", "@", "!"):
-        textx = await typew.get_reply_message()
-        message = typew.pattern_match.group(1)
-        if message:
-            pass
-        elif textx:
-            message = textx.text
-        else:
-            await typew.edit("`Give a text to type!`")
-            return
-        sleep_time = 0.03
-        typing_symbol = "|"
-        old_text = ''
-        await typew.edit(typing_symbol)
-        await asyncio.sleep(sleep_time)
-        for character in message:
-            old_text = old_text + "" + character
-            typing_text = old_text + "" + typing_symbol
-            await typew.edit(typing_text)
-            await asyncio.sleep(sleep_time)
-            await typew.edit(old_text)
-            await asyncio.sleep(sleep_time)
+
+            
+			  
 
 CMD_HELP.update({
     "memes": ".cowsay\
