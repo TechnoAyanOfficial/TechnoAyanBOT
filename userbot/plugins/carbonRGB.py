@@ -60,8 +60,8 @@ async def carbon_api(e):
    CARBONLANG = "en"
    textx = await e.get_reply_message()
    pcode = e.text
-   if pcode[8:]:
-         pcode = str(pcode[8:])
+   if pcode[6:]:
+         pcode = str(pcode[6:])
    elif textx:
          pcode = str(textx.message) # Importing message to module
    code = quote_plus(pcode) # Converting to urlencoded
@@ -98,7 +98,7 @@ async def carbon_api(e):
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="RGB Karbon cause y not",
+         caption="Carbonised by [GujjuBot](https://t.me/Gujju_Bot_Support)",
          force_document=False,
          reply_to=e.message.reply_to_msg_id,
          )
