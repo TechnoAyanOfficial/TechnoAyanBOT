@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 
 
 DEL_TIME_OUT = 70
-DEFAULTUSER = str(AUTONAME) if AUTONAME else AUTONAME="JAYU"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else "JAYU"
 
 
 @borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
