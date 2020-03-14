@@ -182,10 +182,7 @@ async def _(event):
                             supports_streaming=True
                         )
                     ],
-                    progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                        progress(d, t, event, c_time, "trying to upload")
-                    )
-                )
+                    progress_callback=lambda d, t: asyncio.get_event_loop().create_task(progress(d, t, event, c_time, "trying to upload")))
             except Exception as e:
                 await event.edit(str(e))
             else:
