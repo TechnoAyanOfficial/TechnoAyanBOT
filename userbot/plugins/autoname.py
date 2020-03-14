@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 from userbot import AUTONAME
 
 
-DEL_TIME_OUT = 70
+DEL_TIME_OUT = 60
 DEFAULTUSER = str(AUTONAME) if AUTONAME else "GujjuBot"
 
 
