@@ -98,6 +98,7 @@ if bool(ENV):
 
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    AUTONAME = os.environ.get("ALIVE_NAME", None)
 
     # Time & Date - Country and Time Zone
     COUNTRY = str(os.environ.get("COUNTRY", ""))
