@@ -10,7 +10,7 @@ from userbot import AUTONAME
 
 
 DEL_TIME_OUT = 70
-DEFAULTUSER = str(AUTONAME) if AUTONAME else "JAYU"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else "GujjuBot"
 
 
 @borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
