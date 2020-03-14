@@ -61,7 +61,7 @@ async def _(event):
         "output_directory": Config.TMP_DOWNLOAD_DIRECTORY
     }
     paths = response.download(arguments)
-    lst = paths[0][input_str]
+    lst = paths[1][input_str]
     await borg.send_file(
         event.chat_id,
         lst,
