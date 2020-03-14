@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 
 
 DEL_TIME_OUT = 70
-DEFAULTUSER = str(AUTONAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+DEFAULTUSER = str(AUTONAME) if AUTONAME else AUTONAME="JAYU"
 
 
 @borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
