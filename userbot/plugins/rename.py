@@ -18,6 +18,11 @@ from telethon.tl.types import DocumentAttributeVideo
 from telethon.errors import MessageNotModifiedError
 import time
 from userbot.utils import progress, humanbytes, time_formatter, admin_cmd
+import io
+import math
+import os
+from pySmartDL import SmartDL
+
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
