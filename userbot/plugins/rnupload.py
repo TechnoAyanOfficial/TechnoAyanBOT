@@ -43,8 +43,8 @@ async def _(event):
             downloaded_file_name,
             )
         ms_one = (end - start).seconds
-        if Config.NO_SONGS != True:
-            await borg.send_file(event.chat_id, SONA, allow_cache=False)
+        #if Config.NO_SONGS != True:
+           # await borg.send_file(event.chat_id, SONA, allow_cache=False)
         if os.path.exists(downloaded_file_name):
             c_time = time.time()
             await borg.send_file(
