@@ -71,7 +71,7 @@ async def source(e):
 #@register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/japarmar/X-tra-Telegram/blob/master/README.md")
+        await e.edit("https://github.com/japarmar/GujjuBot/blob/master/README.md")
 
 
 
@@ -96,17 +96,6 @@ async def _(event):
 		await asyncio.sleep(0.1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
-
-@borg.on(admin_cmd("myusernames$"))
-#@register(outgoing=True, pattern="^.myusernames$")
-async def _(event):
-    if event.fwd_from:
-        return
-    result = await bot(functions.channels.GetAdminedPublicChannelsRequest())
-    output_str = ""
-    for channel_obj in result.chats:
-        output_str += f"- {channel_obj.title} @{channel_obj.username} \n"
-    await event.edit(output_str)
 
 
 
