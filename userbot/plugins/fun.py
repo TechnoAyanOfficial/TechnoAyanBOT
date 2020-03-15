@@ -87,7 +87,7 @@ INSULT_STRINGS = [
 # ===========================================
                           
 
-@borg.on(admin_cmd(pattern="runss ?(.*)"))
+@borg.on(admin_cmd(pattern="run ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -97,7 +97,7 @@ async def _(event):
     await event.edit(reply_text)
 
 
-@borg.on(admin_cmd(pattern="metooo ?(.*)"))
+@borg.on(admin_cmd(pattern="metoo ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
