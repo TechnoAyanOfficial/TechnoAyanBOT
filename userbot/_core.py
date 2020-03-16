@@ -51,7 +51,7 @@ async def send(event):
         the_plugin_file,
         force_document=True,
         allow_cache=False,
-        reply_to=message_id
+        reply_to=event.message.reply_to_msg_id
     )
     end = datetime.now()
     time_taken_in_ms = (end - start).seconds
