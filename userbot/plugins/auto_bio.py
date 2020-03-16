@@ -69,7 +69,7 @@ BIO_STRINGS = [
 ]
 
 
-DEL_TIME_OUT = 30
+DEL_TIME_OUT = 180
 
 
 @borg.on(admin_cmd(pattern="monkeybio"))  # pylint:disable=E0602
