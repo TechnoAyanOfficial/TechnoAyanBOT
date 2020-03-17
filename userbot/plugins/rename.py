@@ -103,7 +103,7 @@ async def _(event):
                 allow_cache=False,
                 reply_to=event.message.id,
                 thumb=thumb,
-                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+                progress_callback=lambda d, t, c_time: asyncio.get_event_loop().create_task(
                     progress(d, t, event, c_time, "trying to upload")
                 )
             )
