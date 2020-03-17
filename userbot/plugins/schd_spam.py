@@ -12,9 +12,10 @@ async def spammer(e):
         counter = int(text[1])
         spam_message = str(text[2])
         sleep2 = int(text[3])
+        
         for i in range(counter):
             await asyncio.wait([ 
             e.respond(spam_message)])
             #await borg.send_message("hi8")
             await asyncio.sleep(sleep2)
-        await e.delete()
+        
