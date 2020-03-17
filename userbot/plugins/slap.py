@@ -10,20 +10,20 @@ from uniborg.util import admin_cmd
 import random
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
-
+from userbot import ALIVE_NAME
 
 SLAP_TEMPLATES = [
-    "{hits} {user2} with a {item}.",
-    "{hits} {user2} in the face with a {item}.",
-    "{hits} {user2} around a bit with a {item}.",
-    "{throws} a {item} at {user2}.",
-    "grabs a {item} and {throws} it at {user2}'s face.",
-    "launches a {item} in {user2}'s general direction.",
-    "starts slapping {user2} silly with a {item}.",
-    "pins {user2} down and repeatedly {hits} them with a {item}.",
-    "grabs up a {item} and {hits} {user2} with it.",
-    "ties {user2} to a chair and {throws} a {item} at them.",
-    "gave a friendly push to help {user2} learn to swim in lava."
+    "{user1} {hits} {user2} with a {item}.",
+    "{user1} {hits} {user2} in the face with a {item}.",
+    "{user1} {hits} {user2} around a bit with a {item}.",
+    "{user1} {throws} a {item} at {user2}.",
+    "{user1} grabs a {item} and {throws} it at {user2}'s face.",
+    "{user1} launches a {item} in {user2}'s general direction.",
+    "{user1} starts slapping {user2} silly with a {item}.",
+    "{user1} pins {user2} down and repeatedly {hits} them with a {item}.",
+    "{user1} grabs up a {item} and {hits} {user2} with it.",
+    "{user1} ties {user2} to a chair and {throws} a {item} at them.",
+    "{user1} gave a friendly push to help {user2} learn to swim in lava."
 ]
 
 ITEMS = [
@@ -72,6 +72,9 @@ HIT = [
     "smacks",
     "bashes",
 ]
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GujjuBot"
+
 @borg.on(admin_cmd(pattern="slap ?(.*)", allow_sudo=True))
 async def who(event):
     if event.fwd_from:
@@ -124,7 +127,6 @@ async def slap(replied_user, event):
     user_id = replied_user.user.id
     first_name = replied_user.user.first_name
     username = replied_user.user.username
-
     if username:
         slapped = "@{}".format(username)
     else:
@@ -135,6 +137,6 @@ async def slap(replied_user, event):
     hit = random.choice(HIT)
     throw = random.choice(THROW)
 
-    caption = "@"+borg.me.username+" "+ temp.format(user2=slapped, item=item, hits=hit, throws=throw)
+    caption = "@"+borg.me.username+" "+ temp.format(user1=DEFAULTUSER, user2=slapped, item=item, hits=hit, throws=throw)
 
     return caption
