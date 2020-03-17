@@ -8,6 +8,7 @@ from userbot.events import register
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
+        text = message.split()
         counter = int(text[1])
         spam_message = str(text[2])
         sleep = int(text[3])
