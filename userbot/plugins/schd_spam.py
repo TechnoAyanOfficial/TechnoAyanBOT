@@ -11,8 +11,8 @@ async def spammer(e):
         counter = int(text[1])
         spam_message = str(text[2])
         sleep = int(text[3])
-        await asyncio.wait([ 
         for i in range(counter):
+            await asyncio.wait([ 
             e.respond(spam_message)
             await asyncio.sleep(0.1)])
         await e.delete()
