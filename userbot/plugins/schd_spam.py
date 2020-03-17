@@ -13,6 +13,6 @@ async def spammer(e):
         sleep = int(text[3])
         for i in range(counter):
             await asyncio.wait([ 
-            e.respond(spam_message)
-            await asyncio.sleep(0.1)])
+            e.respond(spam_message)])
+            await asyncio.sleep(0.1)
         await e.delete()
