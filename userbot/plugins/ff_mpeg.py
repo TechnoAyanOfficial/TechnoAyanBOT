@@ -28,9 +28,7 @@ async def ff_mpeg_trim_cmd(event):
                 downloaded_file_name = await borg.download_media(
                     reply_message,
                     FF_MPEG_DOWN_LOAD_MEDIA_PATH,
-                    progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                        progress(d, t, event, c_time, "trying to download")
-                    )
+                    
                 )
             except Exception as e:  # pylint:disable=C0103,W0703
                 await event.edit(str(e))
@@ -75,9 +73,7 @@ async def ff_mpeg_trim_cmd(event):
                 supports_streaming=True,
                 allow_cache=False,
                 # reply_to=event.message.id,
-                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, event, c_time, "trying to upload")
-                )
+                
             )
             os.remove(o)
         except Exception as e:
