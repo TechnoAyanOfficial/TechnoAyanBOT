@@ -1,6 +1,6 @@
 import asyncio
 from asyncio import wait
-
+from telethon import events, utils
 
 from userbot.events import register
 
