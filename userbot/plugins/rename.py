@@ -98,7 +98,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 downloaded_file_name,
-                force_document=True,
+                force_document=False,
                 supports_streaming=False,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -167,7 +167,7 @@ async def _(event):
                     event.chat_id,
                     downloaded_file_name,
                     thumb=thumb,
-                    caption=downloaded_file_name,
+                    caption="reuploaded by [GujjuBot](https://www.github.com/japarmar/GujjuBot",
                     force_document=False,
                     allow_cache=False,
                     reply_to=event.message.id,
