@@ -10,13 +10,13 @@ async def spammer(e):
         message = e.text
         text = message.split()
         counter = int(text[1])
-        spam_message = str(text[3:])
+        spam_message = str(text[2])
       #  sm = ' '.join([str(elem) for elem in spam_message]) 
-        sm = ' '.join(map(str, spam_message)) 
-        sleep2 = int(text[2])
+       # sm = ' '.join(map(str, spam_message)) 
+        sleep2 = int(text[3])
         await e.delete()
         for i in range(counter):
             await asyncio.wait([ 
-            e.respond(sm)])
+            e.respond(spam_message)])
             await asyncio.sleep(sleep2)
         
