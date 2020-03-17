@@ -65,14 +65,14 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 remove_bg_image,
-                force_document=True,
+                force_document=False,
                 supports_streaming=False,
                 allow_cache=False,
                 reply_to=message_id
             )
         end = datetime.now()
         ms = (end - start).seconds
-        await event.edit("Background Removed in {} seconds using ReMove.BG API, powered by @UniBorg".format(ms))
+        await event.edit("Background Removed in {} seconds, powered by @UniBorg".format(ms))
     else:
         await event.edit("ReMove.BG API returned Errors. Please report to @UniBorg\n`{}".format(output_file_name.content.decode("UTF-8")))
 
