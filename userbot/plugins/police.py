@@ -5,7 +5,10 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
+from userbot import ALIVE_NAME
 
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "GujjuBot"
 
 @borg.on(admin_cmd(pattern=r"police"))
 
@@ -34,7 +37,7 @@ async def _(event):
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
             "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
             "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
-            "@Halto_Tha **Police iz Here**"
+            "{DEFAULTUSER} **Police iz Here**"
 
  ]
 
