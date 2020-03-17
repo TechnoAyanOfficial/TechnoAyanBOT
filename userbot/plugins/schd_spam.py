@@ -11,7 +11,7 @@ async def spammer(e):
         text = message.split()
         counter = int(text[1])
         spam_message = str(text[3:])
-        sm = str(spam_message)
+        sm = ' '.join([str(elem) for elem in spam_message]) 
         sleep2 = int(text[2])
         await e.delete()
         for i in range(counter):
