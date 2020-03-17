@@ -15,6 +15,6 @@ async def spammer(e):
         for i in range(counter):
             #await asyncio.wait([ 
             #e.respond(spam_message)#])
-            await borg.send_message(spam_message)
+            await borg.send_message(event.chat_id, spam_message)
             await asyncio.sleep(0.1)
         await e.delete()
