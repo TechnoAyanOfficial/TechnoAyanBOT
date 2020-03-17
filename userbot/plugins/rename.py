@@ -127,7 +127,7 @@ async def _(event):
         start = datetime.now()
         file_name = input_str
         reply_message = await event.get_reply_message()
-        #c_time = time.time()
+        c_time = time.time()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloaded_file_name = await borg.download_media(
@@ -161,7 +161,7 @@ async def _(event):
             # Telegram only works with MP4 files
             # this is good, since with MKV files sent as streamable Telegram responds,
             # Bad Request: VIDEO_CONTENT_TYPE_INVALID
-            c_time = datetime.now()
+           # c_time = time.time()
             try:
                 await borg.send_file(
                     event.chat_id,
@@ -179,8 +179,8 @@ async def _(event):
                             round_message=False,
                             supports_streaming=True
                         )
-                    ],
-                    progress_callback=lambda d, t: asyncio.get_event_loop().create_task(progress(d, t, event, c_time, "trying to upload")))
+                    ]
+                    )
             except Exception as e:
                 await event.edit(str(e))
             else:
