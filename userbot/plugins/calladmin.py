@@ -9,8 +9,11 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    reason = event.pattern_match.group(1)
-    if reason else "Spam Spotted"
+    input_str = event.pattern_match.group(1)
+    if input_str:
+        reason = input_str
+    else:
+        reason = "Spam Spotted"
     mentions = "@admin: **{reason}**"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
