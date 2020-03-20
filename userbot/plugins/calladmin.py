@@ -5,11 +5,13 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="admins"))
+@borg.on(admin_cmd(pattern="admins ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "@admin: **Spam Spotted**"
+    reason = event.pattern_match.group(1)
+    if reason else "Spam Spotted"
+    mentions = "@admin: **{reason}**"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f"[\u2063](tg://user?id={x.id})"
