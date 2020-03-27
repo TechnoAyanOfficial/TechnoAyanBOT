@@ -1,4 +1,3 @@
-# plugin by lejend @r4r4n4
 """Emoji
 
 Available Commands:
@@ -8,12 +7,12 @@ Available Commands:
 from telethon import events
 
 import asyncio
-from uniborg.util import admin_cmd
 
 
 
 
-@borg.on(admin_cmd(pattern="lucky"))
+
+@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
 
@@ -25,36 +24,36 @@ async def _(event):
 
     animation_ttl = range(0, 17)
 
-    #input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match.group(1)
 
-    #if input_str == "lucky":
+    if input_str == "lucky":
 
-    await event.edit("Lucky..")
+        await event.edit(input_str)
 
-    animation_chars = [
+        animation_chars = [
         
-            "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",    
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",    
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬛⬛⬜\n⬜⬜⬜👇⬜\n⬜⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬛⬜⬜\n⬜⬜👇⬜⬜\n⬜⬜[🎁](https://github.com/ravana69/PornHub/)⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬛⬜⬜⬜\n⬜👇⬜⬜⬜\n⬜[🎁](https://github.com/ravana69/PornHub/)⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n[🎁](https://github.com/ravana69/PornHub/)⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
             "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
             "⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜",
             "⬜⬜⬜\n⬜⬜⬜\n⬜⬜⬜",
             "⬜⬜\n⬜⬜",
-            "[🎁](https://github.com/japarmar/X-tra-Telegram/)"
+            "[🎁](https://github.com/ravana69/PornHub/)"
 
  ]
 
-    for i in animation_ttl:
+        for i in animation_ttl:
 
-        await asyncio.sleep(animation_interval)
+            await asyncio.sleep(animation_interval)
 
-        await event.edit(animation_chars[i % 17])
+            await event.edit(animation_chars[i % 17])
