@@ -11,7 +11,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("`IAS YAS Bano Desh Ko Sambhalo ^.^ \nJinda Hoon BC ! Gand mara\n\nTelethon version: 6.9.0\nPython: 3.7.3\n\n`"
-                     f"`Mera Maalik`: {DEFAULTUSER}\n"
-                     "`Telethon version: Lawda+Lahsun\nPython: Lawda+Lahsun+Adrak\nMera Asli Maalik:` @TechnoAyanOfficial\n"
-                     "`[Join Channel](t.me/TechnoAyanBoT For Latest Updates`")
+    await alive.edit("░█─░█ █▀▀ █── █── █▀▀█ \n░█▀▀█ █▀▀ █── █── █──█ \n░█─░█ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ \n\nYes Sir ! I'm Alive\n\nTelethon version: 6.9.0\nPython: 3.7.3\n\n`"
+                     "`My Master`: {DEFAULTUSER}\n"
+                     "`My Owner`: @TechnoAyanOfficial\n"
+                     "`[Join Channel](t.me/TechnoAyanBoT) For Latest Updates`")
