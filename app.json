@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/japarmar/GujjuBot",
+  "repository": "https://github.com/TechnoAyanOfficial/TechnoAyanBoT",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -92,7 +92,7 @@
       "required": false
     },
     "TZ": {
-      "description": "Required for Correct Time on autopic",
+      "description": "Required for Correct Time on autopic,autoname etc",
       "value": "Asia/Kolkata",
       "required": false
     }
