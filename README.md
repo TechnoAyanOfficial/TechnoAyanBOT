@@ -1,20 +1,6 @@
-# TechnoAyanBOT
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aca613ff94154a11b2fc463dda080227)](https://www.codacy.com/manual/TechnoAyanOfficial/TechnoAyanBOT?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TechnoAyanOfficial/TechnoAyanBOT&amp;utm_campaign=Badge_Grade)
-
-
-This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram.
-
-For any query or want to know how it works join
-# https://t.me/TechnoAyanYT
-
-# FORK AT YOUR OWN RISK
-# Installing
-
-### The Easy Way
-
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-### The Normal Way
-
+<h1 align="center">TechnoAyanBoT</h1>
+<h3 align="center">This is a Userbot made for Telegram</h3>
+<h2 align="center">How To Host</h2>
+<h5 align="center">The easiest way to deploy this derpfest! is click on the image below</h5>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/TechnoayanBot"> <img src="https://telegra.ph/file/0da24bb89545bc2331e0e.png" alt="Deploy to Heroku" /></a></p>
 
