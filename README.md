@@ -1,4 +1,5 @@
 <h1 align="center">TechnoAyanBoT</h1>
+![](https://img.shields.io/github/repo-size/TechnoAyanOfficial/TechnoAyanBOT.svg?label=Repo%20size&style=flat-square)
 <p align="center"><a href="#how-to-host">How To Host</a> | <a href="#updates-and-support">Updates and Support</a> </p>
 <h3 align="center">This is a Userbot made for Telegram</h3>
 <h2 align="center">How To Host</h2>
