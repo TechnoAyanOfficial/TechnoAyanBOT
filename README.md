@@ -3,7 +3,7 @@
 <h3 align="center">This is a Userbot made for Telegram</h3>
 <h2 align="center">How To Host</h2>
 <h2 align="center">The easiest way to deploy mah bot! is click on the image below</h2>
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/TechnoayanBot"> <img src="https://raw.githubusercontent.com/TechnoAyanOfficial/Secret/master/userbot/GIF_1587983439589.gif?token=AO2LJ6GDSH73X7X6ZF24HPC6U26KA" alt="Deploy to Heroku" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/TechnoayanBot"> <img src="https://github.com/TechnoAyanOfficial/Secret/raw/master/userbot/GIF_1587983439589.gif" alt="Deploy to Heroku" /></a></p>
 <h2 align="center">Updates and Support</h2>
 <p align="center">Join our <a href="https://t.me/TechnoAyanBot">Telegram Channel</a> for update notifications!</p>
 <p align="center">Also join our <a href="https://t.me/TechnoAyanYT">Telegram Support Group</a> for help and support!</p>
