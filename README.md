@@ -4,8 +4,10 @@
 <h3 align="center">This is a Userbot made for Telegram</h3>
 <h2 align="center">How To Host</h2>
 <h2 align="center">The easiest way to deploy mah bot! is click on the image below</h2>
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/TechnoayanBot"> <img src="https://telegra.ph/file/2abcceabb56ac5c5793e3.mp4" alt="Deploy to Heroku" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/TechnoayanBot"> <img src="https://telegra.ph/file/e92f874af427afa55d2bd.gif" alt="Deploy to Heroku" /></a></p>
 <h2 align="center">Updates and Support</h2>
 <p align="center">Join our <a href="https://t.me/TechnoAyanBot">Telegram Channel</a> for update notifications!</p>
 <p align="center">Also join our <a href="https://t.me/TechnoAyanYT">Telegram Support Group</a> for help and support!</p>
 
+
+![](https://telegra.ph/file/e92f874af427afa55d2bd.mp4)
