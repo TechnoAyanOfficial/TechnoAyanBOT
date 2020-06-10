@@ -27,15 +27,15 @@
       "value": ""
     },
     "AUTONAME": {
-      "description": "Enter Your Telegram Name ! Required for .autoname Plugin",
-      "value": "◢◤ʏᴏᴜʀ ɴᴀᴍᴇ◢◤",
+      "description": "Enter Your Telegram Name Ex. ◢◤ʏᴏᴜʀ ɴᴀᴍᴇ◢◤ ! Required for .autoname Plugin",
+      "value": "",
       "required": false
     },
     "ALIVE_NAME": {
 
-      "description": "Enter your Telegram Username with @",
+      "description": "Enter your Telegram Username Ex. @YourUsername",
 
-      "value": "@Your_Username"
+      "value": ""
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
@@ -44,10 +44,6 @@
     "STRING_SESSION": {
       "description": "Get this value by running python3 telesetup.py locally",
       "value": ""
-    },
-    "PM_WARN_LIMIT": {
-      "description": "Enter Limit For PM Permit Warns ",
-      "value": "6"
     },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your Github Access Token for gitcommit plugin.Google 'Github access token' to find.",
@@ -75,13 +71,13 @@
       "required": false
     },
     "CHANNEL_LINK": {
-      "description": "Enter Your Telegram Channel/Group Link for PM PERMIT",
-      "value": "https://t.me/Your_Channel_Link/",
+      "description": "Enter Your Telegram Channel/Group Link for PM PERMIT Ex. https://t.me/Your_Channel_Link/",
+      "value": "",
       "required": false
     },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot.Worth it. Get it.",
-      "value": "123123:YOUBBOTTOKEN",
+      "value": "",
       "required": false
     },
     "CHROME_BIN": {
@@ -96,7 +92,7 @@
     },
     "TG_BOT_USER_NAME_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot ! without @",
-      "value": "Your_Bot_Username",
+      "value": "",
       "required": false
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
