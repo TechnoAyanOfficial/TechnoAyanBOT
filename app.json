@@ -26,12 +26,16 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-
+    "AUTONAME": {
+      "description": "Enter Your Telegram Name ! Required for .autoname Plugin",
+      "value": "◢◤ʏᴏᴜʀ ɴᴀᴍᴇ◢◤",
+      "required": false
+    },
     "ALIVE_NAME": {
 
       "description": "Enter your Telegram Username with @",
 
-      "value": ""
+      "value": "@Your_Username"
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
@@ -62,13 +66,18 @@
       "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
+      "description": "The Value of App Name you filled in right on top ! Required for updater to work.",
       "value": "",
+      "required": false
+    },
+    "CHANNEL_LINK": {
+      "description": "Enter Your Telegram Channel/Group Link for PM PERMIT",
+      "value": "https://t.me/Your_Channel_Link/",
       "required": false
     },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot.Worth it. Get it.",
-      "value": "",
+      "value": "123123:YOUBBOTTOKEN",
       "required": false
     },
     "CHROME_BIN": {
@@ -82,8 +91,8 @@
       "required": false
     },
     "TG_BOT_USER_NAME_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot",
-      "value": "",
+      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot ! without @",
+      "value": "Your_Bot_Username",
       "required": false
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
