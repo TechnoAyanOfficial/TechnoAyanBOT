@@ -5,16 +5,16 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
-
+CHANNEL_LINK = os.environ.get("CHANNEL_LINK", None)
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-
-
+# Important / Exclusive
+replied_user = await event.client(GetFullUserRequest(event.chat_id))
+firstname = replied_user.user.first_name
+        
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` "
-USER_BOT_NO_WARN = ("**Hello ! This is an Automated Reply\n\nYou have found your way here to my master** "
-                    f"{DEFAULTUSER}**'s inbox.\n\n**"
-                    "**My Sir is Watching Avengers Endgame\n\nDrop Your Messege Hopefully You['](https://telegra.ph/file/298023b2595a519bfa12e.mp4)ll Get A Reply Within 3-4 Light Years\n\nOr👇👇\n\nLeave Your Girlfriend's Name + Phone Number + Address, And Count Stars You'll Get Instant Reply After Completing This Task**\n\nType `/start` To Waste Your Time😇\n.                                                                    .\n.                                                                    .\n.                                                                    .")
+USER_BOT_NO_WARN = ("__👋 Hello {} !\n\n🤖 I'm assistant of__ {} Sir\n\n__💻 My Master Is Currently Busy\n\n✉️ Drop Your Message in 2-3 Lines\n\n🔁 You'll Get a Reply ASAP\n\n🤨 Don't Spam Else Get Blocked\n\n❤️ Join My Master's [Channel]({})\n\n©[TechnoAyanBot](https://t.me/TechnoAyanBot) All Right Reserved__".format(firstname, DEFAULTUSER, CHANNEL_LINK))
 
 
 if Var.PRIVATE_GROUP_ID is not None:
