@@ -6,7 +6,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
-CHANNEL_LINK = os.environ.get("CHANNEL_LINK", None)
+CHANNEL_LINK = os.environ.get("CHANNEL_LINK", 'https://telegra.ph/My-Master-Doesnt-Have-Any-Channel-or-Group-06-10')
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
