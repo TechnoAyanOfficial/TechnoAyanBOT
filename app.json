@@ -45,6 +45,10 @@
       "description": "Get this value by running python3 telesetup.py locally",
       "value": ""
     },
+    "PM_WARN_LIMIT": {
+      "description": "Enter Limit For PM Permit Warns ",
+      "value": "6"
+    },
     "GITHUB_ACCESS_TOKEN": {
       "description": "Your Github Access Token for gitcommit plugin.Google 'Github access token' to find.",
       "value": "",
