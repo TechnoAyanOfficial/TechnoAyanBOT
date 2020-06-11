@@ -26,10 +26,18 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+,
+    "ANIMATED_STICKER_PNAME": {
+      "description": "Enter Name For Your Animated Sticker Pack ! Required for Stickers Kang Plugin",
+      "value": ""
+    },
+    "STICKER_PACK_NAME": {
+      "description": "Enter Name For Your Sticker Pack ! Required for Stickers Kang Plugin",
+      "value": ""
+    },
     "AUTONAME": {
       "description": "Enter Your Telegram Name Ex. ◢◤ʏᴏᴜʀ ɴᴀᴍᴇ◢◤ ! Required for .autoname Plugin",
-      "value": "",
-      "required": false
+      "value": ""
     },
     "ALIVE_NAME": {
 
