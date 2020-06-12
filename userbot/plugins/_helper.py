@@ -8,7 +8,7 @@ async def cmd_list(event):
         if tgbotusername is None or input_str == "text":
             string = ""
             for i in CMD_LIST:
-                string += "📖 " + i + "\n"
+                string += "ℹ️ " + i + "\n"
                 for iter_list in CMD_LIST[i]:
                     string += "    `" + str(iter_list) + "`"
                     string += "\n"
@@ -37,7 +37,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = """🤖 **TechnoAyanBot Helper** """
+            help_string = """TechnoAyanBoT Helper"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername,
                 help_string
