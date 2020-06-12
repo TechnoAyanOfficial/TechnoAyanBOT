@@ -15,7 +15,7 @@ A_N = str(AUTONAME) if AUTONAME else f"{ALIVE_NAME}"
 
 DEL_TIME_OUT = 60
 
-@borg.on(admin_cmd(pattern="anun"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
