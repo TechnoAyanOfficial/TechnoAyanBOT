@@ -1,3 +1,6 @@
+
+
+
 """Auto Profile Updation Commands
 .autoname"""
 from telethon import events
@@ -6,21 +9,20 @@ import time
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
 from uniborg.util import admin_cmd
-from userbot import AUTONAME
+from userbot.exclusive import AUTONAME, ALIVE_NAME
 
+A_N = str(AUTONAME) if AUTONAME else f"{ALIVE_NAME}"
 
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(AUTONAME) if AUTONAME else "◢◤ᴛᴇᴄʜɴᴏᴀʏᴀɴ◢◤"
 
-
-@borg.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="anun"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
     while True:
         DM = time.strftime("%d-%m-%y")
         HM = time.strftime("%H:%M")
-        name = f"{HM} {DM} {DEFAULTUSER}"
+        name = f"⌚{HM} ⚡{A_N}⚡ 📆{DM}"
         logger.info(name)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
@@ -37,4 +39,4 @@ async def _(event):
             #     "Successfully Changed Profile Name"
             # )
         await asyncio.sleep(DEL_TIME_OUT)
-    await event.edit(f"Auto Name has been started Master") 
+    await event.edit(f"__Auto Name Started ! Check Your Name__") 
