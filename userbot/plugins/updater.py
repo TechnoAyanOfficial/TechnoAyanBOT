@@ -6,6 +6,7 @@ from contextlib import suppress
 import os
 import sys
 import asyncio
+from userbot.utils import admin_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -14,16 +15,16 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "in this case, Updater is unable to identify the branch to be updated."
     "please check out to an official branch, and re-start the updater."
 )
-OFFICIAL_UPSTREAM_REPO = "https://github.com/TechnoAyanOfficial/TechnoAyanBOT"
-BOT_IS_UP_TO_DATE = "the userbot is up-to-date."
+OFFICIAL_UPSTREAM_REPO = "https://github.com/TechnoAyanOfficial/TechnoAyanBot/"
+BOT_IS_UP_TO_DATE = "Your Bot is up-to-date!."
 NEW_BOT_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "changelog: \n\n{changelog}\n"
-    "updating ..."
+    "**Boss!!I Found Update For {branch_name}\n"
+    "\n\n{changelog}\n"
+    "Pulling Updating And Restating"
 )
 NEW_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "updating ..."
+    "**New update found for** {branch_name}\n"
+    "Updating And Restarting..."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -34,7 +35,8 @@ RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
 
-@command(pattern="^.update", outgoing=True)
+#@command(pattern="^.update", outgoing=True)
+@borg.on(admin_cmd(pattern=r"update"))
 async def updater(message):
     try:
         repo = git.Repo()
@@ -70,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Updating...")
+        await message.edit("Updating!!!Please Wait")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -138,10 +140,9 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("restarted! do `.alive` to check if I am online?\n It will takes approximately 5 mins to update your userbot")
+    await message.edit("**Restarted! do** `.alive` **to check if I am online?**\n`It will takes approximately 5 mins to update TechnoAyanBot`")
     await remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
 
     
-
