@@ -4,9 +4,8 @@ import os
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
-from userbot import ALIVE_NAME
+from userbot.exclusive import ALIVE_NAME, CHANNEL_LINK
 from userbot.utils import admin_cmd
-CHANNEL_LINK = os.environ.get("CHANNEL_LINK", 'https://telegra.ph/My-Master-Doesnt-Have-Any-Channel-or-Group-06-10')
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
@@ -131,7 +130,7 @@ if Var.PRIVATE_GROUP_ID is not None:
     async def do_pm_permit_action(chat_id, event):
         if chat_id not in PM_WARNS:
             PM_WARNS.update({chat_id: 0})
-        if PM_WARNS[chat_id] == 3:
+        if PM_WARNS[chat_id] == 5:
             r = await event.reply(USER_BOT_WARN_ZERO)
             await asyncio.sleep(3)
             await event.client(functions.contacts.BlockRequest(chat_id))
