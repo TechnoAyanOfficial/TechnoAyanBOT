@@ -13,5 +13,5 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("`░█─░█ █▀▀ █── █── █▀▀█ \n░█▀▀█ █▀▀ █── █── █──█ \n░█─░█ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ \n\nYes Sir ! I'm Alive\n\nTelethon version: 6.9.0\nPython: 3.7.3\n\n`"
                     f"`My Master`: {DEFAULTUSER}\n"
-                     "`My Owner`: @TechnoAyanOfficial\n\n"
-                     "Join [Channel](https://t.me/TechnoAyanBoT/) For Latest Updates")
+                     "`My Owner`: @MabidaxBlog\n\n"
+                     "Join [Channel](https://t.me/MabidaxFreenetupdates/) For Latest Updates")
