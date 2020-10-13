@@ -35,7 +35,7 @@ from userbot.exclusive import STICKER_PACK_NAME, ANIMATED_STICKER_PNAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @TechnoAyanOfficial"
 
-@borg.on(admin_cmd(pattern="keng ?(.*)"))
+@borg.on(admin_cmd(pattern="kang ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
