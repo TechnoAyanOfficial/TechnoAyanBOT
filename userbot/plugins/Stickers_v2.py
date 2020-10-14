@@ -1,5 +1,5 @@
 # Stickers Pluging V2
-# @TechnoAyanOfficial
+# @danish_00
 
 """Available Commands:
 .kang [Optional Emoji]
@@ -54,7 +54,7 @@ async def _(event):
     packshortname = f"PremiumStickers_{userid}"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@TechnoAyanOfficial_Sticker.png"
+    file_ext_ns_ion = "@danish_00_Sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
@@ -62,7 +62,7 @@ async def _(event):
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         packname = f"{ANIMATED_STICKER_PNAME}"
         if userid == 1111847352:
-            packshortname = "TechnoAyanOfficial_animated"
+            packshortname = "@danish_00_animated"
         else:
             packshortname = f"PremiumStickers_Animated_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
